@@ -1,0 +1,59 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.LibSVM -S 0 -K 2 -D 3 -G 0.0 -R 0.0 -N 0.5 -M 40.0 -C 1.0 -E 0.001 -P 0.1 -model "C:\\Program Files\\Weka-3-8-6" -seed 1
+Relation:     2022_PGA_Championship_Finish_Encoded-weka.filters.unsupervised.attribute.NumericToNominal-R22-weka.filters.unsupervised.attribute.Remove-R3-15
+Instances:    74
+Attributes:   9
+              hole_par
+              strokes
+              sg_putt
+              sg_arg
+              sg_app
+              sg_ott
+              sg_t2g
+              sg_total
+              Finish
+Test mode:    split 66.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+LibSVM wrapper, original code by Yasser EL-Manzalawy (= WLSVM)
+
+Time taken to build model: 0 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances          22               88      %
+Incorrectly Classified Instances         3               12      %
+Kappa statistic                          0.8362
+Mean absolute error                      0.04  
+Root mean squared error                  0.2   
+Relative absolute error                 14.9321 %
+Root relative squared error             55.3004 %
+Total Number of Instances               25     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.333    0.000    1.000      0.333    0.500      0.553    0.667     0.413     1
+                 0.500    0.087    0.333      0.500    0.400      0.345    0.707     0.207     2
+                 1.000    0.048    0.800      1.000    0.889      0.873    0.976     0.800     3
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     4
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     5
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     6
+Weighted Avg.    0.880    0.015    0.915      0.880    0.874      0.874    0.933     0.834     
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e  f   <-- classified as
+  1  2  0  0  0  0 |  a = 1
+  0  1  1  0  0  0 |  b = 2
+  0  0  4  0  0  0 |  c = 3
+  0  0  0  1  0  0 |  d = 4
+  0  0  0  0  4  0 |  e = 5
+  0  0  0  0  0 11 |  f = 6
+

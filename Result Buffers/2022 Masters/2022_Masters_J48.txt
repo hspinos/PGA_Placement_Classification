@@ -1,0 +1,74 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     2022_Masters_Finish_Encoded-weka.filters.unsupervised.attribute.NumericToNominal-R22-weka.filters.unsupervised.attribute.Remove-R3-15
+Instances:    49
+Attributes:   9
+              hole_par
+              strokes
+              sg_putt
+              sg_arg
+              sg_app
+              sg_ott
+              sg_t2g
+              sg_total
+              Finish
+Test mode:    split 66.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+strokes <= 290
+|   strokes <= 288: 1 (10.0)
+|   strokes > 288: 2 (10.0)
+strokes > 290
+|   strokes <= 293: 3 (11.0)
+|   strokes > 293
+|   |   strokes <= 295: 4 (8.0)
+|   |   strokes > 295: 5 (10.0/1.0)
+
+Number of Leaves  : 	5
+
+Size of the tree : 	9
+
+
+Time taken to build model: 0 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances          15               88.2353 %
+Incorrectly Classified Instances         2               11.7647 %
+Kappa statistic                          0.8522
+Mean absolute error                      0.0523
+Root mean squared error                  0.2035
+Relative absolute error                 19.1919 %
+Root relative squared error             54.8871 %
+Total Number of Instances               17     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.333    0.000    1.000      0.333    0.500      0.540    0.667     0.451     1
+                 1.000    0.133    0.500      1.000    0.667      0.658    0.933     0.500     2
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     3
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     4
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     5
+                 ?        0.000    ?          ?        ?          ?        ?         ?         6
+Weighted Avg.    0.882    0.016    0.941      0.882    0.873      0.879    0.933     0.844     
+
+=== Confusion Matrix ===
+
+ a b c d e f   <-- classified as
+ 1 2 0 0 0 0 | a = 1
+ 0 2 0 0 0 0 | b = 2
+ 0 0 4 0 0 0 | c = 3
+ 0 0 0 4 0 0 | d = 4
+ 0 0 0 0 4 0 | e = 5
+ 0 0 0 0 0 0 | f = 6
+
